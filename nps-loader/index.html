@@ -35,7 +35,6 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .wordmark .smile { stroke-width: 9; }
     .drawing path {
       stroke-dasharray: 1;
       animation: write-letter var(--duration, .88s) cubic-bezier(.42, 0, .24, 1) both;
@@ -80,11 +79,10 @@
 </head>
 <body>
   <main>
-    <svg class="wordmark drawing" viewBox="0 0 274 153" role="img" aria-label="NPS">
+    <svg class="wordmark drawing" viewBox="0 0 274 112" role="img" aria-label="NPS">
       <path pathLength="1" d="M 28,83 V 23 L 80,83 V 23"/>
       <path pathLength="1" style="--delay: .68s" d="M 110,83 V 23 H 135 C 153,23 163,30 163,43 C 163,56 153,63 135,63 H 110"/>
       <path pathLength="1" style="--delay: 1.36s" d="M 244,29 C 226,17 197,20 192,34 C 185,54 235,48 242,66 C 250,85 209,94 188,79"/>
-      <path class="smile" pathLength="1" style="--delay: 2.14s; --duration: .64s" d="M 83,111 C 111,141 163,141 191,111"/>
     </svg>
     <p class="status">リダイレクト中…</p>
   </main>
