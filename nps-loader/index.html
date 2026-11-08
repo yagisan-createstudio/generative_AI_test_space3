@@ -35,11 +35,34 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .wordmark .smile { stroke-width: 8; }
+    .wordmark .eye {
+      fill: #fff;
+      stroke: #800833;
+      stroke-width: 1.6;
+    }
+    .wordmark .pupil { fill: #590c2b; }
+    .wordmark .mouth {
+      fill: #b80946;
+      stroke-width: 5;
+    }
     .drawing path {
       stroke-dasharray: 1;
       animation: write-letter var(--duration, .88s) cubic-bezier(.42, 0, .24, 1) both;
       animation-delay: var(--delay, 0s);
+    }
+    .drawing .pupil { animation: appear .22s ease 2.46s both; }
+    .drawing .mouth {
+      animation-name: write-letter, fill-mouth;
+      animation-duration: .74s, .25s;
+      animation-delay: 2.04s, 2.57s;
+    }
+    @keyframes appear {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fill-mouth {
+      from { fill-opacity: 0; }
+      to { fill-opacity: 1; }
     }
     @keyframes write-letter {
       from { stroke-dashoffset: 1; opacity: 0; }
@@ -74,17 +97,26 @@
     }
     button:focus-visible { outline: 2px solid #b80946; outline-offset: 4px; }
     @media (prefers-reduced-motion: reduce) {
-      .drawing path { animation: none; stroke-dasharray: none; }
+      .drawing path, .drawing .pupil, .drawing .mouth { animation: none; stroke-dasharray: none; }
     }
   </style>
 </head>
 <body>
   <main>
-    <svg class="wordmark drawing" viewBox="0 0 274 132" role="img" aria-label="NPS">
+    <svg class="wordmark drawing" viewBox="0 0 274 167" role="img" aria-label="NPS">
       <path pathLength="1" d="M 28,83 V 23 L 80,83 V 23"/>
       <path pathLength="1" style="--delay: .68s" d="M 110,83 V 23 H 135 C 153,23 163,30 163,43 C 163,56 153,63 135,63 H 110"/>
       <path pathLength="1" style="--delay: 1.36s" d="M 244,29 C 226,17 197,20 192,34 C 185,54 235,48 242,66 C 250,85 209,94 188,79"/>
-      <path class="smile" pathLength="1" style="--delay: 2.02s; --duration: .64s" d="M 111,101 C 125,120 149,120 163,101"/>
+      <g aria-hidden="true">
+        <path class="eye" pathLength="1" style="--delay: 2.05s; --duration: .35s"
+          d="M 127,35.5 C 134,35.5 134,50.5 127,50.5 C 120,50.5 120,35.5 127,35.5 Z"/>
+        <path class="eye" pathLength="1" style="--delay: 2.12s; --duration: .35s"
+          d="M 141,35.5 C 148,35.5 148,50.5 141,50.5 C 134,50.5 134,35.5 141,35.5 Z"/>
+        <ellipse class="pupil" cx="128.5" cy="44" rx="2.55" ry="3.8"/>
+        <ellipse class="pupil" cx="142.5" cy="44" rx="2.55" ry="3.8"/>
+      </g>
+      <path class="mouth" pathLength="1"
+        d="M 65,108 Q 137,122 209,108 C 197,138 170,151 137,151 C 104,151 77,138 65,108 Z"/>
     </svg>
     <p class="status">リダイレクト中…</p>
   </main>
