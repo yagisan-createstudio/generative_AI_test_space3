@@ -31,11 +31,10 @@
     .wordmark path {
       fill: none;
       stroke: #b80946;
-      stroke-width: 10;
+      stroke-width: 18;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .wordmark .viewer { stroke-width: 4.6; }
     .wordmark .smile { stroke-width: 9; }
     .drawing path {
       stroke-dasharray: 1;
@@ -81,30 +80,11 @@
 </head>
 <body>
   <main>
-    <svg class="wordmark drawing" viewBox="0 0 274 197" role="img" aria-label="NPS Viewer">
-      <path pathLength="1" style="--duration: 2.1s"
-        d="M 17,83 C 28,83 40,53 48,24
-           C 54,8 60,56 68,72
-           C 77,94 84,53 94,29
-           C 100,16 116,23 125,22
-           C 156,16 176,31 158,48
-           C 147,59 130,59 117,53
-           C 119,42 123,31 125,22
-           C 120,40 111,68 105,84
-           C 125,94 164,89 183,78
-           C 197,96 239,87 239,69
-           C 239,49 190,57 194,36
-           C 198,18 229,15 250,27"/>
-      <g class="viewer" style="--duration: .48s">
-        <path pathLength="1" style="--delay: 2.08s" d="M 50,111 L 64,143 L 78,111"/>
-        <path pathLength="1" style="--delay: 2.21s" d="M 89,124 V 143"/>
-        <path pathLength="1" style="--delay: 2.45s; --duration: .16s" d="M 89,113 h .1"/>
-        <path pathLength="1" style="--delay: 2.33s" d="M 101,133 H 118 C 118,122 103,119 101,133 C 99,144 111,149 119,142"/>
-        <path pathLength="1" style="--delay: 2.46s" d="M 130,124 L 137,143 L 145,128 L 153,143 L 160,124"/>
-        <path pathLength="1" style="--delay: 2.59s" d="M 170,133 H 187 C 187,122 172,119 170,133 C 168,144 180,149 188,142"/>
-        <path pathLength="1" style="--delay: 2.72s" d="M 202,143 V 124 M 202,134 C 205,126 210,123 218,124"/>
-      </g>
-      <path class="smile" pathLength="1" style="--delay: 3.24s; --duration: .58s" d="M 85,164 C 111,190 163,190 189,164"/>
+    <svg class="wordmark drawing" viewBox="0 0 274 153" role="img" aria-label="NPS">
+      <path pathLength="1" d="M 28,83 V 23 L 80,83 V 23"/>
+      <path pathLength="1" style="--delay: .68s" d="M 110,83 V 23 H 135 C 153,23 163,30 163,43 C 163,56 153,63 135,63 H 110"/>
+      <path pathLength="1" style="--delay: 1.36s" d="M 244,29 C 226,17 197,20 192,34 C 185,54 235,48 242,66 C 250,85 209,94 188,79"/>
+      <path class="smile" pathLength="1" style="--delay: 2.14s; --duration: .64s" d="M 83,111 C 111,141 163,141 191,111"/>
     </svg>
     <p class="status">リダイレクト中…</p>
   </main>
